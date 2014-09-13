@@ -22,10 +22,10 @@ var publisherObj;
 var subscriberObj = {};
 
 var MAX_WIDTH_VIDEO = 264;
-var MAX_HEIGHT_VIDEO = 198;
+var MAX_HEIGHT_VIDEO = 400;
 
-var MIN_WIDTH_VIDEO = 200;
-var MIN_HEIGHT_VIDEO = 150;
+var MIN_WIDTH_VIDEO = 300;
+var MIN_HEIGHT_VIDEO = 300;
 
 var MAX_WIDTH_BOX = 800;
 var MAX_HEIGHT_BOX = 600;

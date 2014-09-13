@@ -7,13 +7,9 @@ class RoomsController < ApplicationController
   end
 
  def create
-    session = @opentok.create_session
+    session = @opentok.create_session # took out request.remote_addr since 
+    #open tok doesn't allow strings in parameters for sessions
     params[:room][:sessionId] = session.session_id
-
-    # session_id = session.session_id
-    # binding.pry
-    # request.remote_addr
-    # params[:room][:sessionId] = session.session_id
 
     @new_room = Room.new(room_params)
 
@@ -26,13 +22,10 @@ class RoomsController < ApplicationController
 end
   
   def show
-    # begin
         @room = Room.find(params[:id])
         @tok_token = @opentok.generate_token @room.sessionId
-    # rescue
-    #   flash[:notice] = "some shit went wrong son"
-    #   redirect_to :action => :index
-    # end
+        # pass in @room.sessionId in as first argument instead of a hash
+        # that contains it in a value
 end
 
   private
