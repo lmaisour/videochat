@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'pry-rails', group: :development
 gem "opentok", "~> 2.2"
+gem 'websocket-rails'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
